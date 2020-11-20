@@ -1,0 +1,65 @@
+Event Listner:Independently monitoring the messsaging pipeline 
+Example :Ebay or stocks winners get the get the stock based on the buy or sell 
+Code :
+Step 1: create the Event listner class 
+step 2: anotate the class with eventlistner 
+step 3: get back to the main code and application context with the object creation 
+step 4: run the code 
+
+Event listnercode :
+
+package com.simplilearn.springboot.events;
+import org.springframework.context.event.ContextStartedEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Component;
+@Component
+public class AnnotationDrivenContextStartedListener {
+    // @Async
+    @EventListener
+    public void handleContextStart(ContextStartedEvent cse) //ContextStartedEvent has the message of the source{
+        System.out.println("Handling context started event.")
+
+}
+}
+
+Main Page Code :
+
+public springboot Application {
+
+public static void main (String [] args) {
+ConfigurableApplicationContext configurableApplicationContext = SpringApplication.run(SpringBootDemoApplication.class, args);
+
+ContextStartedEvent cse = new ContextStartedEvent(configurableApplicationContext);
+        configurableApplicationContext.getBean(AnnotationDrivenContextStartedListener.class).handleContextStart(cse)
+        }
+        }
+        
+Custom Event Listner:
+
+Listing the Custom message 
+
+code :
+Step 1: create the class with the customeevent extend the applicationevent 
+step 2: create the object string message 
+step 3: create the constructor with the object source and message ,with return message for the constructor 
+
+package com.simplilearn.springboot.events;
+import org.springframework.context.ApplicationEvent;
+public class CustomSpringEvent extends ApplicationEvent {
+    private static final long serialVersionUID = 4882925673311956478L;
+    private String message;
+ 
+    public CustomSpringEvent(Object source, String message) {
+        super(source);
+        this.message = message;
+    }
+    public String getMessage() {
+        return message;
+        
+        }
+        }
+        
+ 
+
+
+
