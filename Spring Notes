@@ -242,6 +242,33 @@ Step 8 : update the tomcat port https://join.slack.com/t/webprojects-corp/shared
 
 Spring MVC Architecture :
  Controller() to Model to View 
+ 
+ Spring Boot:
+ Spring Framework +Httpserver - xml 
+ springboot is combination of spring framework and httpserver together , XML is removed due to difficult to debug 
+ 
+ Create Basic spring sample Application :
+ 1. open the page https://start.spring.io/
+ 2. Add the required dependency 
+ 3.download the zip file and import to IDE 
+ 4.In application properties in resources -->
+ Content is 
+ Server port =8085//to change the port 
+ Logging.level.root =Debug // view the logs of the application 
+ 
+ Exception:
+ 
+ Two types of Expection 
+ 1.Complile time Exception 
+ 2. Run time Exception 
+ 
+ try catch and final is used if we know how to handle the Exception , Example file not found 
+ throw is used when we don't know how to handle the Exception 
+ 
+ @ControllerAdvice - Handle Exception in application level or parent Exception class
+ @ExceptionHandler - Handle Exception in methods control , is child level Exception 
+ 
+ 
 
 
 
