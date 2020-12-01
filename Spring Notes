@@ -273,6 +273,12 @@ Spring MVC Architecture :
 
 
 
+
+
+File Handling - uploading and downloading file , eg.Nakuri 
+Spring Framework split the files into smaller frames 
+
+
  
 
 
