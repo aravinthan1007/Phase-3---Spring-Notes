@@ -278,6 +278,15 @@ Spring MVC Architecture :
 File Handling - uploading and downloading file , eg.Nakuri 
 Spring Framework split the files into smaller frames 
 
+Program :
+step 1: create the springboot class in startspring.io
+step2 : create the application properties to split the files 
+step 3: create a class filestorageproperties class 
+step 4: prefix the filestorageproperties as @configurationProperties(prefix ="file")
+step 5: uploaddir with the getter and setters 
+step 6: create another class with the uploadfile response as the pojo class
+step 7: 
+
 
  
 
